@@ -27,4 +27,3 @@ fonts:
   #       - asset: fonts/<our font name>-Italic.ttf //can change this to whatever, doesnt have to be italic
 DONT FORGET TO INPUT THE FOLLOWING COMMAND INTO THE TERMINAL: flutter pub get
 */
-
