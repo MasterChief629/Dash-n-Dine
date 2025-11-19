@@ -23,4 +23,10 @@ class IconFontHelper {
   static const String TENDERS = 'dash_n_dine_assets/images/tenders.PNG';
   static const String TURKEY_MELT = 'dash_n_dine_assets/images/turkey_melt.PNG';
   static const String VEGGIE_BURGER = 'dash_n_dine_assets/images/veggie_burger.PNG';
+  static const String BURRITO = 'dash_n_dine_assets/images/burrito.PNG';
+  static const String BURRITO_BOWL = 'dash_n_dine_assets/images/burrito_bowl.PNG';
+  static const String CHIPS_AND_DIP = 'dash_n_dine_assets/images/chips_and_dip.PNG';
+  static const String TACOS = 'dash_n_dine_assets/images/tacos(2).PNG';
+  static const String SALAD_BOWL = 'dash_n_dine_assets/images/salad_bowl.PNG';
+  static const String QUESADILLA = 'dash_n_dine_assets/images/quesadilla.PNG';
 }

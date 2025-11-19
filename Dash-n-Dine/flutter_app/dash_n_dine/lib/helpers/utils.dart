@@ -191,4 +191,57 @@ class Utils {
       ),
     ];
   }
+
+  static List<Categories> getcoppercategories() {
+    return [
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Burrito',
+        imageName: 'burrito.PNG',
+        icon: IconFontHelper.BURRITO,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Chips and Dip',
+        imageName: 'chip_and_dip.PNG',
+        icon: IconFontHelper.CHIPS_AND_DIP,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Quesadilla',
+        imageName: 'quesadilla.PNG',
+        icon: IconFontHelper.QUESADILLA,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Salad Bowl',
+        imageName: 'salad_bowl.PNG',
+        icon: IconFontHelper.SALAD_BOWL,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Tacos (2)',
+        imageName: 'tacos(2).PNG',
+        icon: IconFontHelper.TACOS,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Burrito Bowl',
+        imageName: 'burrito_bowl.PNG',
+        icon: IconFontHelper.BURRITO_BOWL,
+        subCategories: [],
+      ),
+    ];
+  }
 }
