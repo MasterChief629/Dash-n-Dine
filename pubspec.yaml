@@ -63,7 +63,7 @@ flutter:
    - dash_n_dine_assets/
    - dash_n_dine_assets/icons/
    - dash_n_dine_assets/images/
-
+  # use '/' instead of '\' and put '/' at the end (dash_n_dine_<folder name>/<folder name>/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
