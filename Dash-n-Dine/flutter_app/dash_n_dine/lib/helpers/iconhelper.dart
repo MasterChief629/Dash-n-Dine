@@ -29,4 +29,14 @@ class IconFontHelper {
   static const String TACOS = 'dash_n_dine_assets/images/tacos(2).PNG';
   static const String SALAD_BOWL = 'dash_n_dine_assets/images/salad_bowl.PNG';
   static const String QUESADILLA = 'dash_n_dine_assets/images/quesadilla.PNG';
+  static const String BISCUIT = 'dash_n_dine_assets/images/Biscuit.PNG';
+  static const String BREAKFAST_PROTEIN = 'dash_n_dine_assets/images/breakfast_protein.PNG';
+  static const String BREAKFAST_QUESADILLA = 'dash_n_dine_assets/images/breakfast_quesadilla.PNG';
+  static const String BREAKFAST_SANDWICH = 'dash_n_dine_assets/images/BYO_breakfast_sandwich.PNG';
+  static const String OMELET = 'dash_n_dine_assets/images/BYO_omelet.PNG';
+  static const String EGGS = 'dash_n_dine_assets/images/eggs.PNG';
+  static const String FRENCH_TOAST = 'dash_n_dine_assets/images/french_toast.PNG';
+  static const String HASHBROWNS = 'dash_n_dine_assets/images/Hashbrowns.PNG';
+  static const String BISCUITS_GRAVY = 'dash_n_dine_assets/images/HB_niscuits_gravy.PNG';
+  static const String MARY_GRIDDLE = 'dash_n_dine_assets/images/mary_griddle.PNG';
 }

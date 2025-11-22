@@ -244,4 +244,89 @@ class Utils {
       ),
     ];
   }
+
+  static List<Categories> getbreakfastcategories() {
+    return [
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Biscuit',
+        imageName: 'Biscuit.PNG',
+        icon: IconFontHelper.BISCUIT,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Breakfast Protein',
+        imageName: 'breakfast_protein.PNG',
+        icon: IconFontHelper.BREAKFAST_PROTEIN,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Breakfast Quesadilla',
+        imageName: 'breakfast_quesadilla.PNG',
+        icon: IconFontHelper.BREAKFAST_QUESADILLA,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'BYO Breakfast Sandwich',
+        imageName: 'BYO_breakfast_sandwich.PNG',
+        icon: IconFontHelper.BREAKFAST_SANDWICH,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'BYO Omelet',
+        imageName: 'BYO_omelet.PNG',
+        icon: IconFontHelper.OMELET,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Eggs',
+        imageName: 'eggs.PNG',
+        icon: IconFontHelper.EGGS,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'French Toast',
+        imageName: 'french_toast.PNG',
+        icon: IconFontHelper.FRENCH_TOAST,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Hashbrowns',
+        imageName: 'hashbrowns.PNG',
+        icon: IconFontHelper.HASHBROWNS,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Honey Butter Biscuits and Gravy',
+        imageName: 'HB_biscuit_gravy.PNG',
+        icon: IconFontHelper.BISCUITS_GRAVY,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Mary Griddle',
+        imageName: 'mary_griddle.PNG',
+        icon: IconFontHelper.MARY_GRIDDLE,
+        subCategories: [],
+      ),
+    ];
+  }
 }
