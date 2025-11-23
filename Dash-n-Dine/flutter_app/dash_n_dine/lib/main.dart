@@ -6,7 +6,6 @@ import 'package:dash_n_dine/pages/menu_template/menu_mozzies.dart';
 import 'package:dash_n_dine/pages/menu_template/menu_urban.dart';
 import 'package:dash_n_dine/pages/menu_template/menu_copperhead.dart';
 import 'package:dash_n_dine/pages/menu_template/menu_breakfast.dart';
-import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
 void main() {
   runApp(MaterialApp(

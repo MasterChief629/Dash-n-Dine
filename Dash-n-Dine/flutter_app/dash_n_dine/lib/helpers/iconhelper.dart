@@ -1,11 +1,17 @@
 class IconFontHelper {
-  static const String PLACEHOLDER_LOGO = 'dash_n_dine_assets/images/duck.png'; //placeholder logo
+  static const String PLACEHOLDER_LOGO = 'dash_n_dine_assets/images/duck.png'; //placeholder icon used for various things
   static const String MARYVILLE_LOGO = 'dash_n_dine_assets/images/maryville.png';
+  //Copperhead items
   static const String COPPERHEAD = 'dash_n_dine_assets/images/copperheadjacks.png';
+  //louies items
   static const String LOUIES = 'dash_n_dine_assets/images/Louies.png';
+  //Mozzies items
   static const String MOZZIES = 'dash_n_dine_assets/images/Mozzies.png';
+  //Rice it up items
   static const String RICE = 'dash_n_dine_assets/images/Rice.png';
+  //Sushi items
   static const String SUSHI = 'dash_n_dine_assets/images/Sushi.png';
+  //Urban Hen Items
   static const String HEN = 'dash_n_dine_assets/images/Urban Hen.png';
   static const String CATFISH = 'dash_n_dine_assets/images/catfish_po.PNG';
   static const String FRIES = 'dash_n_dine_assets/images/fries.PNG';
