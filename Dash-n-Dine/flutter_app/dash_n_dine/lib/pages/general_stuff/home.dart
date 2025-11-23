@@ -3,6 +3,7 @@ import 'package:dash_n_dine/helpers/models/categories.dart';
 import 'package:dash_n_dine/helpers/utils.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
 //This page is a TEST PAGE for now, will rewrite everything to make it look nicer later
 
