@@ -54,7 +54,7 @@ class Utils {
       ),
     ];
   }
-  static List<Categories> getmozziescategories() {
+  static List<Categories> getMozziesCategories() {
     return [
 
       Categories(
@@ -83,7 +83,7 @@ class Utils {
     ];
   }
 
-  static List<Categories> geturbancategories() {
+  static List<Categories> getUrbanCategories1() {
     return [
 
       Categories(
@@ -192,7 +192,7 @@ class Utils {
     ];
   }
 
-  static List<Categories> getcoppercategories() {
+  static List<Categories> getCopperCategories() {
     return [
 
       Categories(
@@ -245,7 +245,7 @@ class Utils {
     ];
   }
 
-  static List<Categories> getbreakfastcategories() {
+  static List<Categories> getBreakfastCategories() {
     return [
 
       Categories(
@@ -325,6 +325,192 @@ class Utils {
         name: 'Mary Griddle',
         imageName: 'mary_griddle.PNG',
         icon: IconFontHelper.MARY_GRIDDLE,
+        subCategories: [],
+      ),
+    ];
+  }
+
+  static List<Categories> getLouiesCategories() {
+    return [
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'BYO Burger',
+        imageName: 'burrito.PNG',
+        icon: IconFontHelper.BURRITO,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'BYO Sandwich',
+        imageName: 'chip_and_dip.PNG',
+        icon: IconFontHelper.CHIPS_AND_DIP,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Fries',
+        imageName: 'quesadilla.PNG',
+        icon: IconFontHelper.QUESADILLA,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Mini Chicken Tacos',
+        imageName: 'salad_bowl.PNG',
+        icon: IconFontHelper.SALAD_BOWL,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Toasted Ravioli',
+        imageName: 'tacos(2).PNG',
+        icon: IconFontHelper.TACOS,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Mac and Cheese Bites',
+        imageName: 'burrito_bowl.PNG',
+        icon: IconFontHelper.BURRITO_BOWL,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Drinks',
+        imageName: 'burrito_bowl.PNG',
+        icon: IconFontHelper.BURRITO_BOWL,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Louies Snacks',
+        imageName: 'burrito_bowl.PNG',
+        icon: IconFontHelper.BURRITO_BOWL,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Ice Cream Sunday',
+        imageName: 'burrito_bowl.PNG',
+        icon: IconFontHelper.BURRITO_BOWL,
+        subCategories: [],
+      ),
+    ];
+  }
+
+  static List<Categories> getUrbanCategories2() {
+    return [
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Catfish Poboy',
+        imageName: 'catfish_po.PNG',
+        icon: IconFontHelper.CATFISH,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'French Fries',
+        imageName: 'fries.PNG',
+        icon: IconFontHelper.FRIES,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Gluten Free Tenders and/or Fries',
+        imageName: 'gf_tenders_fries.PNG',
+        icon: IconFontHelper.GLUTEN_FREE,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Grilled Cheese',
+        imageName: 'grilled_cheese.PNG',
+        icon: IconFontHelper.GRILLED_CHEESE,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Hallal BBQ Chicken',
+        imageName: 'Hallal_BBQ_chicken.PNG',
+        icon: IconFontHelper.HALLAL_BBQ_CHICKEN,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Orange Chicken',
+        imageName: 'orange_chicken.PNG',
+        icon: IconFontHelper.ORANGE_CHICKEN,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Skirt Steak',
+        imageName: 'skirt_steak.PNG',
+        icon: IconFontHelper.SKIRT_STEAK,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Smash Burger',
+        imageName: 'smash_burger.PNG',
+        icon: IconFontHelper.SMASH_BURGER,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Soup',
+        imageName: 'soup_and_chili.PNG',
+        icon: IconFontHelper.SOUP,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Chili',
+        imageName: 'soup_and_chili.PNG',
+        icon: IconFontHelper.CHILI,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Chicken Tenders',
+        imageName: 'tenders.PNG',
+        icon: IconFontHelper.TENDERS,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Turkey Melt',
+        imageName: 'turkey_melt.PNG',
+        icon: IconFontHelper.TURKEY_MELT,
+        subCategories: [],
+      ),
+
+      Categories(
+        color: AppColors.DEFAULT_COLOR, //default color (gray)
+        name: 'Veggie Burger',
+        imageName: 'veggie_burger.PNG',
+        icon: IconFontHelper.VEGGIE_BURGER,
         subCategories: [],
       ),
     ];

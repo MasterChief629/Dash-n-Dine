@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 //This page is a TEST PAGE for now, will rewrite everything to make it look nicer later
 
-class UrbanMenu extends StatelessWidget {
-  List<Categories> categories = Utils.getcoppercategories();
+class CopperMenu extends StatelessWidget {
+  List<Categories> categories = Utils.getCopperCategories();
 
   @override
   Widget build(BuildContext context) {
