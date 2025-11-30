@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:dash_n_dine/pages/general_stuff/home.dart';
 import 'package:dash_n_dine/pages/general_stuff/splash_screen.dart';
 import 'package:dash_n_dine/pages/general_stuff/welcome_page.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
-void main() {
+Future main() async {
+  await Settings.init(cacheProvider: SharePreferenceCache()); //this can also be used with SQL, will have to look into how to do it though, and if we woul dwant/need to do it.
   runApp(MaterialApp(
     home: SplashScreen(
       duration: 3,
