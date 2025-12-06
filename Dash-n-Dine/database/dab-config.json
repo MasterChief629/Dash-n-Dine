@@ -1,0 +1,135 @@
+{
+  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v1.6.77/dab.draft.schema.json",
+  "data-source": {
+    "database-type": "mysql",
+    "connection-string": "Server=127.0.0.1;Port=3306;Database=dashndine;User Id=developer;Password=123456789;",
+    "options": {
+    }
+  },
+  "runtime": {
+    "rest": {
+      "enabled": true,
+      "path": "/api",
+      "request-body-strict": true
+    },
+    "graphql": {
+      "enabled": true,
+      "path": "/graphql",
+      "allow-introspection": true
+    },
+    "host": {
+      "cors": {
+        "origins": [
+          "http://localhost:5000"
+        ],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      },
+      "mode": "development"
+    }
+  },
+  "entities": {
+    "Restaurant": {
+      "source": {
+        "object": "restaurants",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "Restaurant",
+          "plural": "Restaurants"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        { "role": "anonymous", "actions": [ "create", "read", "update", "delete" ] },
+        { "role": "authenticated", "actions": [ "create", "read", "update", "delete" ] }
+      ]
+    },
+    "Menu": {
+      "source": {
+        "object": "menus",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "Menu",
+          "plural": "Menus"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        { "role": "anonymous", "actions": [ "create", "read", "update", "delete" ] },
+        { "role": "authenticated", "actions": [ "create", "read", "update", "delete" ] }
+      ]
+    },
+    "Food": {
+      "source": {
+        "object": "food",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "Food",
+          "plural": "Foods"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        { "role": "anonymous", "actions": [ "create", "read", "update", "delete" ] },
+        { "role": "authenticated", "actions": [ "create", "read", "update", "delete" ] }
+      ]
+    },
+    "User": {
+      "source": {
+        "object": "users",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "User",
+          "plural": "Users"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        { "role": "anonymous", "actions": [ "create", "read", "update", "delete" ] },
+        { "role": "authenticated", "actions": [ "create", "read", "update", "delete" ] }
+      ]
+    },
+    "Order": {
+      "source": {
+        "object": "orders",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "Order",
+          "plural": "Orders"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        { "role": "anonymous", "actions": [ "create", "read", "update", "delete" ] },
+        { "role": "authenticated", "actions": [ "create", "read", "update", "delete" ] }
+      ]
+    }
+  }
+}
