@@ -6,12 +6,11 @@ import 'package:flutter/material.dart';
 
 //This page is a TEST PAGE for now, will rewrite everything to make it look nicer later
 
-class UrbanMenu extends StatelessWidget {
-  List<Categories> categories = Utils.getUrbanCategories1();
+class LouiesMenu extends StatelessWidget {
+  List<Categories> categories = Utils.getLouiesCategories();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       drawer: Drawer(),
       appBar: AppBar(),
@@ -38,7 +37,9 @@ class UrbanMenu extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                            Image.asset('dash_n_dine_assets/images/${categories[index].imageName!}')
+                            Image.asset(
+                              'dash_n_dine_assets/images/${categories[index].imageName!}',
+                            ),
                           ],
                         ),
                       ],

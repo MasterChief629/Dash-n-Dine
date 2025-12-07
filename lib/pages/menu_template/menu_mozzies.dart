@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 //This page is a TEST PAGE for now, will rewrite everything to make it look nicer later
 
 class MozzieMenu extends StatelessWidget {
-  List<Categories> categories = Utils.getmozziescategories();
+  List<Categories> categories = Utils.getMozziesCategories();
 
   @override
   Widget build(BuildContext context) {

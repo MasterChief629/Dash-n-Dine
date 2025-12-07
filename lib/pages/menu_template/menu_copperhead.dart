@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 //This page is a TEST PAGE for now, will rewrite everything to make it look nicer later
 
 class MenuCopperhead extends StatelessWidget {
-  List<Categories> categories = Utils.getcoppercategories();
+  List<Categories> categories = Utils.getCopperCategories();
 
   @override
   Widget build(BuildContext context) {

@@ -4,15 +4,15 @@ CREATE DATABASE dashndine;
 USE dashndine;
 
 CREATE TABLE restaurants (
-	restID INT unsigned,
+	restID INT,
     restName VARCHAR(32),
     restHours VARCHAR(64),
     primary key (restID)
 );
 
 CREATE TABLE menus (
-	menuID INT unsigned,
-    restID INT unsigned,
+	menuID INT,
+    restID INT,
     foodIDlist TEXT,
     menuType ENUM ('Breakfast', 'Lunch', 'Dinner', 'All Day') DEFAULT 'All Day',
     primary key (menuID),
@@ -20,10 +20,10 @@ CREATE TABLE menus (
 );
 
 CREATE TABLE food (
-	foodID INT unsigned,
-    menuID INT unsigned,
+	foodID INT,
+    menuID INT,
     foodName VARCHAR(32),
-    amount INT unsigned,
+    amount INT,
     price DECIMAL(5, 2),
     foodDescription TEXT,
     imagePath VARCHAR(255),
@@ -42,10 +42,10 @@ CREATE TABLE users (
 );
 
 CREATE TABLE orders (
-	orderID INT unsigned,
-    userID INT unsigned,
-    foodID INT unsigned,
-    restID INT unsigned,
+	orderID INT,
+    userID INT,
+    foodID INT,
+    restID INT,
     orderTime DATETIME,
     totalPrice DECIMAL(6, 2),
     orderStatus ENUM ('Processing', 'Order Recieved', 'Preparing', 'Cooking', 'Delivering', 'Ready') DEFAULT 'Processing',

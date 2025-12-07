@@ -3,6 +3,7 @@ import 'package:dash_n_dine/helpers/iconhelper.dart';
 import 'package:dash_n_dine/pages/general_stuff/home.dart';
 import 'package:dash_n_dine/widgets/iconfont.dart';
 import 'package:flutter/material.dart';
+import 'package:dash_n_dine/pages/user_stuff/user_create_account.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -101,7 +102,12 @@ class WelcomePage extends StatelessWidget {
                         child: InkWell(
                           splashColor: AppColors.DARK_RED.withValues(alpha: 0.2),
                           highlightColor: AppColors.BRIGHT_RED.withValues(alpha: 0.2),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => UserCreateAccount()),
+                        );
+                          },
                           child: Container(
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
