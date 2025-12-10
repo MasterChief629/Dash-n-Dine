@@ -5,12 +5,16 @@ import 'package:dash_n_dine/helpers/iconhelper.dart';
 import 'package:dash_n_dine/pages/general_stuff/home.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:dash_n_dine/helpers/texthelper.dart';
 
 //this is a placeholder page, remove from final iteration of project
 
 //class
 class TestPage extends StatelessWidget{
   const TestPage({Key? key}) : super(key: key);
+  
+  final String realname = '';
+  final String email = '';
   
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class TestPage extends StatelessWidget{
           SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[buildHeader(context), buildMenuItems(context)],
+              children: <Widget>[buildHeader(context, realname, email), buildMenuItems(context)],
             ),
           ),
         ],

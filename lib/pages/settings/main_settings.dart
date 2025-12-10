@@ -1,15 +1,9 @@
-import 'package:dash_n_dine/helpers/appcolors.dart';
-import 'package:dash_n_dine/helpers/models/categories.dart';
-import 'package:dash_n_dine/helpers/utils.dart';
-import 'package:dash_n_dine/helpers/iconhelper.dart';
-import 'package:dash_n_dine/pages/general_stuff/home.dart';
 import 'package:dash_n_dine/widgets/icon_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
-import 'package:dash_n_dine/widgets/icon_widget.dart';
 import 'package:dash_n_dine/pages/settings/account_page.dart';
 import 'package:dash_n_dine/pages/settings/notifications_page.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 //Main settings page
 
@@ -60,24 +54,24 @@ class _SettingsPageState extends State<MainSettings> {
     title: 'Logout',
     subtitle: '',
     leading: IconWidget(icon: Icons.logout, color: Colors.blueAccent,),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'),
+    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'), //Log user out
   );
   Widget buildDeleteAccount() => SimpleSettingsTile(
     title: 'Delete Account',
     subtitle: '',
-    leading: IconWidget(icon: Icons.logout, color: Colors.redAccent,),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Delete Account'),
+    leading: IconWidget(icon: Icons.delete, color: Colors.redAccent,),
+    //onTap:() => Utils.showSnackBar(context, 'Clicked Delete Account'), //Use delete user from DB
   );
   Widget buildReportBug(BuildContext context) => SimpleSettingsTile(
     title: 'Report a bug!',
     subtitle: '',
     leading: IconWidget(icon: Icons.bug_report, color: Colors.tealAccent,),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'),
+    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'), //Not enough time to implement this, its just for show
   );
   Widget buildSendFeedback(BuildContext context) => SimpleSettingsTile(
     title: 'Send Feedback!',
     subtitle: '',
     leading: IconWidget(icon: Icons.thumb_up, color: Colors.deepPurple,),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'),
+    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'), //Also just for show
   );
 }

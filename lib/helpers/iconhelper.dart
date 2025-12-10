@@ -1,5 +1,5 @@
 class IconFontHelper {
-  static const String PLACEHOLDER_LOGO = 'dash_n_dine_assets/images/duck.png'; //placeholder icon used for various things
+  static const String LOGO = 'dash_n_dine_assets/images/Dash n Dine(3).png'; //placeholder icon used for various things
   static const String MARYVILLE_LOGO = 'dash_n_dine_assets/images/maryville.png';
   //Copperhead items
   static const String COPPERHEAD = 'dash_n_dine_assets/images/copperheadjacks.png';
@@ -46,10 +46,3 @@ class IconFontHelper {
   static const String BISCUITS_GRAVY = 'dash_n_dine_assets/images/HB_niscuits_gravy.PNG';
   static const String MARY_GRIDDLE = 'dash_n_dine_assets/images/mary_griddle.PNG';
 }
-
-/*
-NOTE
-Please organize the menu items
-put the food items underneath the restaurant name
-helps with readability
-*/

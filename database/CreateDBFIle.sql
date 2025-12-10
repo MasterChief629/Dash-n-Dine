@@ -33,7 +33,7 @@ CREATE TABLE food (
 );
 
 CREATE TABLE users (
-	userID INT unsigned,
+	userID INT,
     realName VARCHAR(32),
     username VARCHAR(32),
     pw VARCHAR(64),

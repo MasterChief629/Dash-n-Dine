@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dash_n_dine/helpers/iconhelper.dart';
 import 'package:dash_n_dine/widgets/iconfont.dart';
 
 //says "is marked as immutable". Still runs fine as far as I can tell. If any issues pop up, I'll fix them.
@@ -26,11 +27,21 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         color: Color(0xffE02424),
         child: Center(
-          child: IconFont(
-            color: Colors.white,
-            size: 75,
-            iconName:
-                'replace me with the logo!', // placeholder, will replace this with the actual icon when we make it.
+          child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           crossAxisAlignment: CrossAxisAlignment.stretch,
+           children: [
+            Center(
+              child: ClipOval(
+                child: Container(
+                  width: 180,
+                  height: 180,
+                  color: Color(0xffFDFDFD),
+                  child: Image.asset(IconFontHelper.LOGO),
+                ),
+              ),
+            ),
+           ],
           ),
         ),
       ),
