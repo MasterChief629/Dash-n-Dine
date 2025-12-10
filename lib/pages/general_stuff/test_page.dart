@@ -24,7 +24,7 @@ class TestPage extends StatelessWidget{
           SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[buildHeader(context, realname, email), buildMenuItems(context)],
+              children: <Widget>[buildHeader(context), buildMenuItems(context)],
             ),
           ),
         ],

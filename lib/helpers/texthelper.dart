@@ -45,7 +45,7 @@ class _TextHelperState extends State<TextHelper> {
     //Navigate to home page after successful account creation
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => HomePage(realname: realname, email: email,)),
+      MaterialPageRoute(builder: (context) => HomePage()),
     );
   }
 

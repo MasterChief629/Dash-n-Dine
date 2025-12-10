@@ -1,18 +1,18 @@
 import 'package:dash_n_dine/helpers/iconhelper.dart';
 import 'package:dash_n_dine/helpers/models/categories.dart';
 import 'appcolors.dart';
-
 class Utils {
-  static List<Categories> getCategories() {
+  static List<Categories> getCategories(){
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Copperhead Jacks',
-        imageName: 'copperheadjacks.png',
+        imageName: 'CopperheadJacks.png',
         icon: IconFontHelper.COPPERHEAD,
         subCategories: [],
       ),
-
+      
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Louies',
@@ -32,31 +32,31 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Rice it Up!',
-        imageName: 'Rice.png',
-        icon: IconFontHelper.LOGO,
+        imageName: 'RiceItUp.png',
+        icon: IconFontHelper.PLACEHOLDER_LOGO,
         subCategories: [],
       ),
 
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
-        name: 'Sushi with Faith',
-        imageName: 'Sushi.png',
-        icon: IconFontHelper.LOGO,
+        name: 'Sushi by Faith',
+        imageName: 'SushibyFaith.png',
+        icon: IconFontHelper.PLACEHOLDER_LOGO,
         subCategories: [],
       ),
 
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Urban Hen',
-        imageName: 'Urban Hen.png',
-        icon: IconFontHelper.LOGO,
+        imageName: 'UrbanHen.png',
+        icon: IconFontHelper.PLACEHOLDER_LOGO,
         subCategories: [],
       ),
     ];
   }
-
   static List<Categories> getMozziesCategories() {
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'BYO Pasta',
@@ -85,6 +85,7 @@ class Utils {
 
   static List<Categories> getUrbanCategories1() {
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Catfish Poboy',
@@ -193,6 +194,7 @@ class Utils {
 
   static List<Categories> getCopperCategories() {
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Burrito',
@@ -245,6 +247,7 @@ class Utils {
 
   static List<Categories> getBreakfastCategories() {
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Biscuit',
@@ -304,7 +307,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Hashbrowns',
-        imageName: 'hashbrowns.PNG',
+        imageName: 'Hashbrowns.PNG',
         icon: IconFontHelper.HASHBROWNS,
         subCategories: [],
       ),
@@ -312,7 +315,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Honey Butter Biscuits and Gravy',
-        imageName: 'HB_biscuit_gravy.PNG',
+        imageName: 'HB_biscuits_gravy.PNG',
         icon: IconFontHelper.BISCUITS_GRAVY,
         subCategories: [],
       ),
@@ -329,10 +332,11 @@ class Utils {
 
   static List<Categories> getLouiesCategories() {
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'BYO Burger',
-        imageName: 'burrito.PNG',
+        imageName: 'BYO_burger.jpg',
         icon: IconFontHelper.BURRITO,
         subCategories: [],
       ),
@@ -340,7 +344,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'BYO Sandwich',
-        imageName: 'chip_and_dip.PNG',
+        imageName: 'BYO_sandwich.jpg',
         icon: IconFontHelper.CHIPS_AND_DIP,
         subCategories: [],
       ),
@@ -348,7 +352,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Fries',
-        imageName: 'quesadilla.PNG',
+        imageName: 'fries2.JPG',
         icon: IconFontHelper.QUESADILLA,
         subCategories: [],
       ),
@@ -356,7 +360,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Mini Chicken Tacos',
-        imageName: 'salad_bowl.PNG',
+        imageName: 'mini_chicken_tacos,jepg',
         icon: IconFontHelper.SALAD_BOWL,
         subCategories: [],
       ),
@@ -364,7 +368,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Toasted Ravioli',
-        imageName: 'tacos(2).PNG',
+        imageName: 'toasted_ravs.jpg',
         icon: IconFontHelper.TACOS,
         subCategories: [],
       ),
@@ -372,7 +376,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Mac and Cheese Bites',
-        imageName: 'burrito_bowl.PNG',
+        imageName: 'mac_cheese_bites.jpg',
         icon: IconFontHelper.BURRITO_BOWL,
         subCategories: [],
       ),
@@ -380,7 +384,7 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Drinks',
-        imageName: 'burrito_bowl.PNG',
+        imageName: 'drinks.jpg',
         icon: IconFontHelper.BURRITO_BOWL,
         subCategories: [],
       ),
@@ -388,21 +392,24 @@ class Utils {
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Louies Snacks',
-        imageName: 'burrito_bowl.PNG',
+        imageName: 'snacks.png',
         icon: IconFontHelper.BURRITO_BOWL,
         subCategories: [],
       ),
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Ice Cream Sunday',
-        imageName: 'burrito_bowl.PNG',
+        imageName: 'sunday.jpg',
         icon: IconFontHelper.BURRITO_BOWL,
         subCategories: [],
       ),
     ];
   }
+
   static List<Categories> getUrbanCategories2() {
     return [
+
       Categories(
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Catfish Poboy',

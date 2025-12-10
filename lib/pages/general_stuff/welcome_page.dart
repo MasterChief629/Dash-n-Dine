@@ -9,9 +9,6 @@ import 'package:dash_n_dine/helpers/texthelper.dart';
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
-  final String realname = '';
-  final String email = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +86,7 @@ class WelcomePage extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage(realname: '', email: '',)),
+                          MaterialPageRoute(builder: (context) => HomePage()),
                         );
                       },
                       child: Text('Login'), //placeholder text
