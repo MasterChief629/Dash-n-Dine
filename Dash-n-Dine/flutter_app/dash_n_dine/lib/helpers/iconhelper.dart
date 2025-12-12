@@ -1,5 +1,5 @@
 class IconFontHelper {
-  static const String PLACEHOLDER_LOGO = 'dash_n_dine_assets/images/duck.png'; //placeholder icon used for various things
+   static const String LOGO = 'dash_n_dine_assets/images/Dash n Dine(3).png';
   static const String MARYVILLE_LOGO = 'dash_n_dine_assets/images/maryville.png';
   //Copperhead items
   static const String COPPERHEAD = 'dash_n_dine_assets/images/CopperheadJacks.png';

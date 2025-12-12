@@ -9,6 +9,7 @@ class TextHelper extends StatefulWidget {
 
 class _TextHelperState extends State<TextHelper> {
   // Controllers for managing the text inputs
+  final TextEditingController _realnameController = TextEditingController();
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -18,9 +19,10 @@ class _TextHelperState extends State<TextHelper> {
     final username = _usernameController.text;
     final password = _passwordController.text;
     final email = _emailController.text;
-
+    final realname = _realnameController.text;
+    
     //validating input for username and password
-    if (username.isEmpty || password.isEmpty || email.isEmpty) {
+    if (username.isEmpty || password.isEmpty || email.isEmpty || realname.isEmpty) {
       _showDialog('Error', 'Please fill in all required fields.');
       return;
     }
@@ -33,12 +35,12 @@ class _TextHelperState extends State<TextHelper> {
 
     //Checking password length
     if (password.length < 6) {
-      _showDialog('Error', 'Password must be at least 6 characters long.');
+      _showDialog('Error', 'Password must be at least 6 characters long, with no special characters (accepted special characters: ! ? ).');
       return;
     }
 
-    //call DB here (not sure how to do this part, will need help)
-
+    //call DB here (not sure how to do this part, may need help figuring this out)
+    
 
     //Navigate to home page after successful account creation
     Navigator.push(
@@ -47,7 +49,7 @@ class _TextHelperState extends State<TextHelper> {
     );
   }
 
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,12 +57,24 @@ class _TextHelperState extends State<TextHelper> {
         title: Text('Sign Up Page'),
       ),
 
-      //username
+      
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
+              //Real Name
+              TextField(
+                controller: _realnameController,
+                inputFormatters: [
+                  FilteringTextInputFormatter.deny(
+                      RegExp(r'[!@#$%^&*(),.?":{}|<>]')),
+                ],
+                decoration: InputDecoration(
+                  labelText: 'Please enter your name',
+                ),
+              ),
+              //username
               TextField(
                 controller: _usernameController,
                 inputFormatters: [
@@ -86,7 +100,7 @@ class _TextHelperState extends State<TextHelper> {
                 controller: _passwordController,
                 inputFormatters: [
                   FilteringTextInputFormatter.deny(
-                      RegExp(r'[#%^&*(),.":{}|<>]')),
+                      RegExp(r'[@#%^&*(),.":{}|<>]')),
                 ],
                 obscureText: true,  // Hides the text for password
                 decoration: InputDecoration(

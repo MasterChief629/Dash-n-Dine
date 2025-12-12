@@ -1,13 +1,6 @@
-import 'package:dash_n_dine/helpers/appcolors.dart';
-import 'package:dash_n_dine/helpers/models/categories.dart';
-import 'package:dash_n_dine/helpers/utils.dart';
-import 'package:dash_n_dine/helpers/iconhelper.dart';
-import 'package:dash_n_dine/pages/general_stuff/home.dart';
 import 'package:dash_n_dine/widgets/icon_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
-import 'package:dash_n_dine/widgets/icon_widget.dart';
 
 class AccountPage extends StatelessWidget{
   @override

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dash_n_dine/pages/restaurant_stuff/cart_provider.dart';
+import 'cart_page.dart';
 
 class FoodCustomizationPage extends StatefulWidget {
   final Map<String, dynamic> food;
@@ -17,7 +19,6 @@ class _FoodCustomizationPageState extends State<FoodCustomizationPage> {
   void initState() {
     super.initState();
 
-    // Safely handle null or missing customization string
     customizationOptions = (widget.food['customization'] as String? ?? "")
         .split(',')
         .map((e) => e.trim())
@@ -73,10 +74,19 @@ class _FoodCustomizationPageState extends State<FoodCustomizationPage> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                          "Added to order! Options: ${selectedOptions.join(', ')}"),
+                  final cartItem = CartItem(
+                    foodID: widget.food['foodID'],
+                    menuID: widget.food['menuID'],
+                    selectedOptions: selectedOptions.join(","),
+                    price: widget.food['price'],
+                  );
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => CartPage(
+                      cartItems: [cartItem],
+                      ),
                     ),
                   );
                 },

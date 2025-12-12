@@ -4,6 +4,7 @@ import 'package:dash_n_dine/pages/general_stuff/home.dart';
 import 'package:dash_n_dine/widgets/iconfont.dart';
 import 'package:flutter/material.dart';
 import 'package:dash_n_dine/pages/user_stuff/user_create_account.dart';
+import 'package:dash_n_dine/helpers/texthelper.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -36,7 +37,7 @@ class WelcomePage extends StatelessWidget {
                         width: 180,
                         height: 180,
                         color: Color(0xffFDFDFD),
-                        child: Image.asset(IconFontHelper.PLACEHOLDER_LOGO),
+                        child: Image.asset(IconFontHelper.LOGO),
                       ),
                     ),
                   ),

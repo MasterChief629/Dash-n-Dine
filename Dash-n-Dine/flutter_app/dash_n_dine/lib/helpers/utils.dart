@@ -33,7 +33,7 @@ class Utils {
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Rice it Up!',
         imageName: 'RiceItUp.png',
-        icon: IconFontHelper.PLACEHOLDER_LOGO,
+        icon: IconFontHelper.LOGO,
         subCategories: [],
       ),
 
@@ -41,7 +41,7 @@ class Utils {
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Sushi by Faith',
         imageName: 'SushibyFaith.png',
-        icon: IconFontHelper.PLACEHOLDER_LOGO,
+        icon: IconFontHelper.LOGO,
         subCategories: [],
       ),
 
@@ -49,7 +49,7 @@ class Utils {
         color: AppColors.DEFAULT_COLOR, //default color (gray)
         name: 'Urban Hen',
         imageName: 'UrbanHen.png',
-        icon: IconFontHelper.PLACEHOLDER_LOGO,
+        icon: IconFontHelper.LOGO,
         subCategories: [],
       ),
     ];

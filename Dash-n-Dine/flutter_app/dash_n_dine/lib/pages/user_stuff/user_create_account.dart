@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dash_n_dine/pages/general_stuff/splash_screen.dart';
-import 'package:dash_n_dine/pages/general_stuff/welcome_page.dart';
-import 'package:flutter_settings_screens/flutter_settings_screens.dart';
-import 'package:dash_n_dine/widgets/iconfont.dart';
 import 'package:dash_n_dine/helpers/iconhelper.dart';
-import 'package:dash_n_dine/helpers/appcolors.dart';
 import 'package:dash_n_dine/helpers/texthelper.dart';
 
 class UserCreateAccount extends StatelessWidget {

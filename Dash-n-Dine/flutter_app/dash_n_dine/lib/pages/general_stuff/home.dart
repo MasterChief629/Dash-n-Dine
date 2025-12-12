@@ -4,7 +4,6 @@ import 'package:dash_n_dine/helpers/appcolors.dart';
 import 'package:dash_n_dine/helpers/iconhelper.dart';
 import 'package:dash_n_dine/helpers/models/categories.dart';
 import 'package:dash_n_dine/helpers/utils.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:dash_n_dine/pages/settings/main_settings.dart';
 import 'package:dash_n_dine/pages/general_stuff/test_page.dart';
@@ -15,46 +14,40 @@ import "package:dash_n_dine/pages/restaurant_stuff/restaurant_menu_display.dart"
 //This page is a TEST PAGE for now, will rewrite everything to make it look nicer later
 
 class HomePage extends StatefulWidget {
+  List<Categories> categories = Utils.getCategories();
+
   @override
   _HomePageState createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
   bool isLoading = true;
   List restaurants = [];
-
   Future<List<int>> getFoodIdsForRestaurant(int restID) async {
     final response = await http.get(Uri.parse("http://10.0.2.2:5000/api/Menu"));
-
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body) as Map;
       final List menus = jsonData["value"];
-
       final menu = menus.firstWhere(
         (m) => m["restID"] == restID,
         orElse: () => null,
       );
-
       if (menu == null) {
       return []; 
       }
-
       return (menu["foodIDlist"] as String)
           .split(",")
           .map((id) => int.parse(id))
           .toList();
     } 
-
     return [];
   }
-
   static const String baseImagePath = 'dash_n_dine_assets/images/';
-
   @override
   void initState() {
     super.initState();
     getRestaurants();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -180,17 +173,21 @@ Widget buildHeader(BuildContext context) => Container(
     children: [
       CircleAvatar(
         radius: 50,
-        backgroundImage: NetworkImage(IconFontHelper.PLACEHOLDER_LOGO), //image not showing up, will fix later
+        backgroundImage: NetworkImage(
+          IconFontHelper.LOGO,
+        ), //image not showing up, will fix later
       ),
       SizedBox(height: 12),
+      /*
       Text(
-        'Quack Quack! (placeholder image, replace)',
+        realname, // Display real name
         style: TextStyle(fontSize: 28, color: Colors.white),
       ),
       Text(
-        'QuackQuack39@live.maryville.edu',
+        email, // Display email
         style: TextStyle(fontSize: 14, color: Colors.white),
       ),
+      */
     ],
   ),
 );
@@ -261,8 +258,3 @@ Widget buildMenuItems(BuildContext context) => Column(
     ),
   ],
 );
-
-/*
-A change I'm thinking of:
-instead of having separate buttons for the cart and settings, we could put both in the drawer (hamburger menu), 
-*/
