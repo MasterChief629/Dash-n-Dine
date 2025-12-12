@@ -33,12 +33,31 @@ class _MenuListScreenState extends State<MenuListScreen> {
         itemCount: menus.length,
         itemBuilder: (context, index) {
           final menu = menus[index] as Map;
+          final id = menu['menuID'] as int;
           return ListTile(
             title: Text(menu['restName']),
             subtitle: Text(menu['menuType']),
-            onTap: () {
-              
-            },
+            trailing: PopupMenuButton(
+              onSelected: (value) {
+                if(value == 'edit') {
+                  navigateToEditPage(menu);
+                }else if (value == 'delete') {
+                  deleteByID(id);
+                }
+              },
+              itemBuilder: (context){
+                return [
+                  PopupMenuItem(
+                    child: Text('Edit'),
+                    value: 'edit',
+                    ),
+                  PopupMenuItem(
+                    child: Text('Delete'),
+                    value: 'delete',
+                    )
+                ];
+              },
+              ),
         );
       }
       ),
@@ -52,10 +71,34 @@ class _MenuListScreenState extends State<MenuListScreen> {
     );
   }
 
-  void navigateToAddPage() {
-    final route = MaterialPageRoute(builder: (context) => AddMenuPage(),
+  Future<void> deleteByID(int id) async {
+    final url = 'http://10.0.2.2:5000/api/Menu/menuID/$id';
+    final uri = Uri.parse(url);
+    final response = await http.delete(uri);
+    if (response.statusCode == 204) {
+      final filtered = menus.where((element) => element['menuID'] != id).toList();
+      setState(() {
+        menus = filtered;
+      });
+    } else {
+      showErrorMessage('Unable to Delete');
+    }
+  }
+
+  void navigateToEditPage(Map menu) {
+    final route = MaterialPageRoute(builder: (context) => AddMenuPage(editing: menu),
     );
     Navigator.push(context,route);
+  }
+
+  Future<void> navigateToAddPage()  async{
+    final route = MaterialPageRoute(builder: (context) => AddMenuPage(),
+    );
+    await Navigator.push(context,route);
+    setState(() {
+      isLoading = true;
+    });
+   getMenus();
   }
   
 
@@ -97,4 +140,26 @@ class _MenuListScreenState extends State<MenuListScreen> {
     });
 
    }
+
+   void showSuccessMessage(String message){
+    final snackBar = SnackBar(
+      content: Text(
+        message,
+        style: TextStyle(color: Colors.black)
+        ),
+        backgroundColor: Colors.green,
+      );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+
+  void showErrorMessage(String message){
+    final snackBar = SnackBar(
+      content: Text(
+        message,
+        style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.red,
+        );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+}
