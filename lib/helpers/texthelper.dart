@@ -198,7 +198,7 @@ class _TextHelperState extends State<TextHelper> {
     );
   }
 
-  //helper function to check for existing account (not working)
+  //helper function to check for existing account (not working, not sure how to fix this without setting up various json files and editing the database, which I don't want to mess with)
   Future<bool> _checkAccountExists(String username, String email, String userID) async {
   final url = 'http://10.0.2.2:5000/api/User/check'; 
   final uri = Uri.parse(url);

@@ -13,9 +13,6 @@ import 'package:dash_n_dine/helpers/texthelper.dart';
 class TestPage extends StatelessWidget{
   const TestPage({Key? key}) : super(key: key);
   
-  final String realname = '';
-  final String email = '';
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

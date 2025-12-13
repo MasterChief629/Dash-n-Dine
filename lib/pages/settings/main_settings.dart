@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:dash_n_dine/pages/general_stuff/welcome_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:dash_n_dine/helpers/texthelper.dart';
 import 'package:dash_n_dine/widgets/icon_widget.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:dash_n_dine/pages/settings/account_page.dart';
 import 'package:dash_n_dine/pages/settings/notifications_page.dart';
+import 'package:shared_preferences/shared_preferences.dart'; // For storing user tokens
 
 //Main settings page
 
@@ -23,7 +25,7 @@ class MainSettings extends StatefulWidget {
 }
 
 class _MainSettingsState extends State<MainSettings> {
-  //String ID = ''; //holds user id
+
   List<dynamic> users = []; // List to manage user data
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -37,7 +39,7 @@ class _MainSettingsState extends State<MainSettings> {
             children: <Widget>[
               AccountPage(),
               NotificationsPage(),
-              buildLogout(),
+              buildLogout(context),
               buildDeleteAccount(),
             ],
           ),
@@ -57,12 +59,19 @@ class _MainSettingsState extends State<MainSettings> {
   );
 
   //feel free to change the color of the circle, they are just placeholder colors for now
-  Widget buildLogout() => SimpleSettingsTile(
-    title: 'Logout',
-    subtitle: '',
-    leading: IconWidget(icon: Icons.logout, color: Colors.blueAccent),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'), //Log user out
-  );
+  Widget buildLogout(BuildContext context) => SimpleSettingsTile(
+  title: 'Logout',
+  subtitle: '',
+  leading: IconWidget(icon: Icons.logout, color: Colors.blueAccent),
+  onTap: () {
+    logout(context); //calling logout function
+    // Redirect to the WelcomePage
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(builder: (context) => WelcomePage()),
+      (Route<dynamic> route) => false, // Remove all previous routes
+    );
+  },
+);
 
   Widget buildDeleteAccount() => SimpleSettingsTile(
     title: 'Delete Account',
@@ -77,14 +86,14 @@ class _MainSettingsState extends State<MainSettings> {
     title: 'Report a bug!',
     subtitle: '',
     leading: IconWidget(icon: Icons.bug_report, color: Colors.tealAccent),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'), //Not enough time to implement this, its just for show
+    //onTap:() => Utils.showSnackBar(context, 'Clicked Report a Bug'), //Not enough time to implement this, its just for show
   );
 
   Widget buildSendFeedback(BuildContext context) => SimpleSettingsTile(
     title: 'Send Feedback!',
     subtitle: '',
     leading: IconWidget(icon: Icons.thumb_up, color: Colors.deepPurple),
-    //onTap:() => Utils.showSnackBar(context, 'Clicked Logout'), //Also just for show
+    //onTap:() => Utils.showSnackBar(context, 'Clicked Send Feedback'), //Also just for show
   );
 
   Future<void> deleteByUserID(int userID) async {
@@ -127,6 +136,13 @@ class _MainSettingsState extends State<MainSettings> {
       ),
     );
   }
+
+  Future<void> logout(BuildContext context) async {
+  // Clear user data from SharedPreferences or any local storage
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.remove('userToken'); // Assuming you stored a token with this key
+  await prefs.remove('username'); // Clear any other relevant data
+}
 
   //dialog box (popup thingy) to prompt user for ID
   Future<void> _showDeleteConfirmationDialog() async {
