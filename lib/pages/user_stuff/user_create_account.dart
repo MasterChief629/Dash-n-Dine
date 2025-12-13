@@ -35,8 +35,9 @@ class UserCreateAccount extends StatelessWidget {
 
 /*
 REQUIRED
-username
+userID
 email
+realname
+username
 password
-confirm password
 */
