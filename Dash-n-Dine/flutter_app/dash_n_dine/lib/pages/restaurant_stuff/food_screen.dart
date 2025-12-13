@@ -122,6 +122,5 @@ class _FoodListScreenState extends State<FoodListScreen> {
     setState(() {
       isLoading = false;
     });
-
    }
   }

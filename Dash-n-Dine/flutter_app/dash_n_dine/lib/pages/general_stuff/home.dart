@@ -19,9 +19,11 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
+
 class _HomePageState extends State<HomePage> {
   bool isLoading = true;
   List restaurants = [];
+
   Future<List<int>> getFoodIdsForRestaurant(int restID) async {
     final response = await http.get(Uri.parse("http://10.0.2.2:5000/api/Menu"));
     if (response.statusCode == 200) {
@@ -32,22 +34,22 @@ class _HomePageState extends State<HomePage> {
         orElse: () => null,
       );
       if (menu == null) {
-      return []; 
+        return [];
       }
       return (menu["foodIDlist"] as String)
           .split(",")
           .map((id) => int.parse(id))
           .toList();
-    } 
+    }
     return [];
   }
+
   static const String baseImagePath = 'dash_n_dine_assets/images/';
   @override
   void initState() {
     super.initState();
     getRestaurants();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +84,7 @@ class _HomePageState extends State<HomePage> {
               return Card(
                 margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 child: InkWell(
-                  onTap: () async{
+                  onTap: () async {
                     int restID = restaurant['restID'];
                     String restName = restaurant['restName'];
 
@@ -92,8 +94,8 @@ class _HomePageState extends State<HomePage> {
                       context,
                       MaterialPageRoute(
                         builder: (_) => MenuItemsScreen(
-                        foodIds: foodIds,
-                        restaurantName: restName,
+                          foodIds: foodIds,
+                          restaurantName: restName,
                         ),
                       ),
                     );
@@ -120,12 +122,17 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 restaurant['restName'] ?? '',
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               SizedBox(height: 8),
                               Text(
                                 restaurant['restHours'] ?? '',
-                                style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.grey[700],
+                                ),
                               ),
                             ],
                           ),
@@ -143,9 +150,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> getRestaurants() async {
+    
     final url = 'http://10.0.2.2:5000/api/Restaurant';
     final uri = Uri.parse(url);
     final response = await http.get(uri);
+
     if (response.statusCode == 200) {
       final json = jsonDecode(response.body) as Map;
       final result = json['value'] as List;
@@ -212,7 +221,7 @@ Widget buildMenuItems(BuildContext context) => Column(
       ), //route to main settings page
     ),
     //cart
-    ListTile(
+    /*ListTile(
       leading: const Icon(Icons.shopping_cart),
       title: const Text('Cart'),
       onTap: () => Navigator.of(context).push(
@@ -234,8 +243,8 @@ Widget buildMenuItems(BuildContext context) => Column(
       onTap: () => Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => TestPage()),
       ), //route to order status page
-    ),
-        ListTile(
+    ),*/
+    ListTile(
       leading: const Icon(Icons.timer_outlined),
       title: const Text('Restaurants adding'),
       onTap: () => Navigator.of(context).push(

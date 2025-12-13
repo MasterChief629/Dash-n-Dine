@@ -34,6 +34,7 @@ CREATE TABLE food (
 
 CREATE TABLE users (
 	userID INT,
+    userEmail VARCHAR(32);
     realName VARCHAR(32),
     username VARCHAR(32),
     pw VARCHAR(64),
